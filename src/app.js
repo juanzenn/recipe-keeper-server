@@ -72,6 +72,4 @@ app.post('/reviews', async (req, res) => {
   }
 });
 
-app.listen(port, err => {
-  console.log(err ? err : `${port}`);
-});
+app.listen(port, '0.0.0.0');
