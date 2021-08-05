@@ -72,6 +72,6 @@ app.post('/reviews', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`The app is running on http://localhost:${port}`);
+app.listen(port, err => {
+  console.log(err ? err : `${port}`);
 });
