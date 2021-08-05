@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 import { createClient } from '@supabase/supabase-js';
 import { shuffle } from './lib/helpers';
