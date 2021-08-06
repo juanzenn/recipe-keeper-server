@@ -19,6 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 import express from 'express';
+import cors from 'cors';
 
 // Import my functions query
 import { fetchReviews, seedTable, addReview } from './supabase-client';
@@ -27,6 +28,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello from the server of Recipe Keeper!');
